@@ -2,6 +2,7 @@
 
 This example application shows you how to query a MySQL database, aggregate the query results, transform the result into CSV format and send it as an attachment via email.
 
+![QueryingDBEmailUseCase](../resources/images/querying-a-db-and-attaching-results-to-an-email/querying-a-db-and-attaching-results-to-an-email-use-case.png?raw=true "Querying DB and send email use case")
 
 ### Assumptions
 
@@ -25,6 +26,9 @@ The XML data containing employee names is sent to the application using the HTTP
 9. Double-click the **DB Lookup** mediator and change the configuration according to your database configs.
 10. Enable and configure **MailTo Transport** in Micro Integrator as explained [here](https://ei.docs.wso2.com/en/latest/micro-integrator/setup/transport_configurations/configuring-transports/#configuring-the-mailto-transport).
 11. Double-click the **Address EndPoint** inside the **Clone Mediator** and update the email address after **mailto** with the email address, that you need to receive the email.
+
+![QueryingDBEmailScreenshot](../resources/images/querying-a-db-and-attaching-results-to-an-email/querying-a-db-and-attaching-results-to-an-email.png?raw=true "Querying DB and send email screenshot")
+
 13. Run the sample by right click on the **QueryinngaDbAndAttachingResultsToAnEmailCompositeApplication** under the main project and selecting **Export Project Artifacts and Run**.
 14. Make a POST request to localhost:8290/employees using **HTTP Client** in Integration Studio with the following xml code as the body:
 
