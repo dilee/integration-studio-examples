@@ -14,13 +14,17 @@
 # specific language governing permissions and limitations
 # under the License.
 
-# This workflow will build the project with Maven 
-# when a Pull Request is created.
+# This workflow will trigger the following flow when
+# a pull request is merged.
+# 1. Build the repository with Maven.
+# 2. If the build is success, clone the docs-ei repository.
+# 3. Replace the content with built docs content.
+# 4. Send a pull request to doce-ei repository.
 
 name: Maven Build - Pull Request
 
 on:
-  pull_request:
+  push:
     branches: [ master ]
 
 jobs:
